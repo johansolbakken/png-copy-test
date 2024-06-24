@@ -1,9 +1,6 @@
 name: Convert SVG to PNG
 
-on:
-  push:
-    paths:
-      - '**/*.svg'
+on: [push]
 
 jobs:
   convert:
