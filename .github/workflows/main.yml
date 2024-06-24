@@ -21,7 +21,7 @@ jobs:
           pip install cairosvg
 
       - name: Run conversion script
-        uses: ./johansolbakken/png-copy-action@main
+        uses: johansolbakken/png-copy-action@main
         with:
           svg-folder: '.'
           png-folder: 'png-copy'
