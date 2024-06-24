@@ -1,6 +1,11 @@
 name: Convert SVG to PNG
 
-on: [push]
+on:
+  push:
+    paths:
+      - '**/*.svg'
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   convert:
@@ -11,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run conversion script
-        uses: johansolbakken/png-copy-action@main
+        uses: johansolbakken/png-copy-action@main  # Reference the external action repository
         with:
           svg-folder: '.'
           png-folder: 'png-copy'
