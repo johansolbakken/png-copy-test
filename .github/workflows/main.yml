@@ -1,4 +1,4 @@
-name: "My C++ Action Workflow"
+name: "Ensure PNG Copies"
 on: [push]
 
 jobs:
@@ -8,5 +8,3 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run my custom action
         uses: johansolbakken/png-copy-action@main
-        with:
-          exampleInput: "Hello"
