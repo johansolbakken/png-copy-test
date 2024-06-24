@@ -1,0 +1,12 @@
+name: "My C++ Action Workflow"
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run my custom action
+        uses: johansolbakken/png-copy-action@main
+        with:
+          exampleInput: "Hello"
